@@ -1,0 +1,72 @@
+:root {
+    --yellow: #ffcc29;
+    --blue: #1d539e;
+    --gray: #828799;
+    --page-background: #f9fbfc;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(0deg, var(--page-background) 50%, var(--blue) 50%);
+}
+
+.title-plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.plan-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  height: 50vh;
+}
+
+.plan-card {
+  min-width: 220px;
+  max-width: 350px;
+  width: 25%;
+  height: 90%;
+  background-color: var(--page-background);
+  border-radius: 10px;
+  box-shadow: 1px 2px 1px 1px rgba(96, 104, 116, 0.1);
+  overflow: hidden;
+}
+
+.middle-plan-card {
+  height: 95%;
+}
+
+.plan-header {
+  width: calc(100% + 2px);
+  height: 75px;
+  margin: -1px 0 0 -1px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.plan-middle-header {
+  background-color: var(--yellow);
+  justify-content: space-between;
+}
+
+.popular-button {
+  background-color: var(--blue);
+  border-radius: 999px;
+  padding: 8px 22px;
+  color: white;
+  font-size: .75em;
+}
