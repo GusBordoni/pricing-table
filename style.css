@@ -15,6 +15,7 @@
 body {
   height: 100vh;
   background: linear-gradient(0deg, var(--page-background) 50%, var(--blue) 50%);
+  background-attachment: fixed;
 }
 
 .title-plans {
@@ -29,23 +30,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: .5em;
   height: 50vh;
 }
 
 .plan-card {
-  min-width: 220px;
-  max-width: 350px;
-  width: 25%;
-  height: 90%;
+  width: 360px;
+  height: 425px;
   background-color: var(--page-background);
   border-radius: 10px;
-  box-shadow: 1px 2px 1px 1px rgba(96, 104, 116, 0.1);
+  box-shadow: 1px 2px 1px 2px rgba(66, 71, 80, 0.075);
   overflow: hidden;
 }
 
 .middle-plan-card {
-  height: 95%;
+  transform: scale(1.05);
+  margin: 0 10px;
 }
 
 .plan-header {
@@ -56,11 +56,14 @@ body {
   display: flex;
   align-items: center;
   padding: 0 10%;
+  font-size: 1.5em;
+  font-weight: 600;
 }
 
 .plan-middle-header {
   background-color: var(--yellow);
   justify-content: space-between;
+  color: var(--blue);
 }
 
 .popular-button {
@@ -68,5 +71,65 @@ body {
   border-radius: 999px;
   padding: 8px 22px;
   color: white;
-  font-size: .75em;
+  font-size: .75rem;
 }
+
+.price-start {
+  font-size: 3em;
+  font-weight: 700;
+  color: #1b2631;
+}
+
+.price-cents {
+  font-size: 2em;
+  font-weight: 700;
+  color: #1b2631;
+}
+
+.month-pay {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: var(--gray);
+  white-space: pre;
+}
+
+.desc {
+  font-size: 1.15em;
+  font-weight: 400;
+  color: var(--gray);
+}
+
+.plan-card > div > hr {
+  width: 85%;
+  border: 1px solid #4f4f5f1c;
+  margin: 15px;
+}
+
+ul.check {
+  list-style: none;
+}
+
+ul.check > li::before {
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  display: block;
+  float: left;
+  margin-left: -1.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("./assets/check.svg");
+}
+
+ul.check > li {
+  color: var(--gray);
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+.core {
+  color: #1b2631;
+}
+
